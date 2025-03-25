@@ -1,0 +1,6 @@
+API_TOKEN="AIzaSyAlZvumjnbb6F2E3m09QZYczqjckrIp8AA"
+LANGSMITH_TOKEN="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"
+LANGSMITH_ENDPOINT="https://eu.api.smith.langchain.com"
+LANGSMITH_PROJECT="LLM-DATAART-PROJECT-X112"
+GOOGLE_CRED_PATH="/home/jgryta/.config/gcloud/application_default_credentials.json"
+REDIS_URL="redis://localhost:6379"
