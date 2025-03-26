@@ -1,6 +1,10 @@
 from langchain_core.messages import HumanMessage, SystemMessage
 
 class SummaryGenerator:
+    """
+        Generate summary for hr
+    """
+    
     def __init__(self, llm, system_prompt="""YOkay, I understand. You want me to analyze the provided JSON data, which represents a resume, and generate a concise summary suitable for an HR employee. Here's the system prompt I will use to guide the model's behavior:
 
 System Prompt:
@@ -31,12 +35,12 @@ Example:
 """):
         self.llm = llm
         self.system_prompt = system_prompt
-    def summary(self, text: str) -> str:
+    async def summary(self, text: str) -> str:
 
         messages= [
             SystemMessage(content=self.system_prompt),
             HumanMessage(content=text)
         ]
 
-        ai_msg = self.llm.invoke(messages)
+        ai_msg = await self.llm.invoke(messages)
         return ai_msg.content

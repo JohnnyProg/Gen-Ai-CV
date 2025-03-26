@@ -35,12 +35,12 @@ Example:
 """):
         self.llm = llm
         self.system_prompt = system_prompt
-    def summary(self, text: str) -> str:
+    async def summary(self, text: str) -> str:
 
         messages= [
             SystemMessage(content=self.system_prompt),
             HumanMessage(content=text)
         ]
 
-        ai_msg = self.llm.invoke(messages)
+        ai_msg = await self.llm.invoke(messages)
         return ai_msg.content

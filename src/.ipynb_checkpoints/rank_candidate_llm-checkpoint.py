@@ -38,14 +38,14 @@ values should be in the format 01, 02, 03, 07, 10 so ALVAYS 2 last characters ar
 """):
         self.llm = llm
         self.system_prompt = system_prompt
-    def rank(self, text: str, requirements: str) -> str:
+    async def rank(self, text: str, requirements: str) -> str:
 
         messages= [
             SystemMessage(content=self.system_prompt),
             HumanMessage(content=text + "job requirements: " +  requirements)
         ]
 
-        ai_msg = self.llm.invoke(messages)
+        ai_msg = await self.llm.invoke(messages)
         match = re.search(r'(\d+)$', ai_msg.content.strip())  
         print("inside rank candidate llm = ", ai_msg)
 

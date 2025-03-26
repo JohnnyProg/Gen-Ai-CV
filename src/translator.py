@@ -26,11 +26,11 @@ If the input text contains any non-English text, proceed with translation as fol
 """):
         self.llm = llm
         self.system_prompt = system_prompt
-    def translate(self, text: str) -> str:
+    async def translate(self, text: str) -> str:
         messages= [
             SystemMessage(content=self.system_prompt),
             HumanMessage(content=text)
         ]
 
-        ai_msg = self.llm.invoke(messages)
+        ai_msg = await self.llm.invoke(messages)
         return ai_msg

@@ -1,6 +1,9 @@
 from langchain_core.messages import HumanMessage, SystemMessage
 
 class Translator:
+    """
+        translates cv to english, if all cv is in english returns 'empty' to save on tokens and speed
+    """
     def __init__(self, llm, system_prompt="""You are a language assistant with two primary functions: translation and identity check.
 
 Your first task is to **immediately** determine if the input text requires translation. If **all** the input text is already in English, respond with the single word "empty" and nothing else.  Do **not** perform any other actions.
@@ -23,11 +26,11 @@ If the input text contains any non-English text, proceed with translation as fol
 """):
         self.llm = llm
         self.system_prompt = system_prompt
-    def translate(self, text: str) -> str:
+    async def translate(self, text: str) -> str:
         messages= [
             SystemMessage(content=self.system_prompt),
             HumanMessage(content=text)
         ]
 
-        ai_msg = self.llm.invoke(messages)
+        ai_msg = await self.llm.invoke(messages)
         return ai_msg

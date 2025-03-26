@@ -88,7 +88,7 @@ Remember to return valid json format, NO ENDLINE SYMBOLS
             SystemMessage(content=self.system_prompt),
             HumanMessage(content=resume_text),
         ]
-        response = self.llm(messages)
+        response = self.llm.invoke(messages)
         clean_json = re.sub(r"^```json\n|\n```$", "", response.content.strip())
         parsed_data = json.loads(clean_json)
         return parsed_data

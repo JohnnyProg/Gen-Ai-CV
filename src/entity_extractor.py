@@ -82,13 +82,13 @@ Only return the JSON object. Do not add any extra explanation.
 Remember to return valid json format, NO ENDLINE SYMBOLS
 """
 
-    def extract(self, resume_text: str):
+    async def extract(self, resume_text: str):
         """Extracts entities from resume text."""
         messages = [
             SystemMessage(content=self.system_prompt),
             HumanMessage(content=resume_text),
         ]
-        response = self.llm(messages)
+        response = await self.llm.invoke(messages)
         clean_json = re.sub(r"^```json\n|\n```$", "", response.content.strip())
         parsed_data = json.loads(clean_json)
         return parsed_data
