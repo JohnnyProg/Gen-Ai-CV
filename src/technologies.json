@@ -1,0 +1,31 @@
+{
+  "technologies": {
+    "queue": ["RabbitMQ", "Kafka", "ActiveMQ", "Azure Service Bus", "Google Pub/Sub"],
+    "mobile_languages": ["Swift", "Kotlin", "Dart"],
+    "mobile_frameworks": ["Flutter", "React Native", "SwiftUI", "Jetpack Compose"],
+    "devops_containers": ["Docker", "Podman"],
+    "devops_orchestration": ["Kubernetes", "Docker Swarm", "Nomad"],
+    "devops_ci_cd": ["Jenkins", "GitHub Actions", "GitLab CI/CD", "CircleCI", "ArgoCD"],
+    "devops_infrastructure_as_code": ["Terraform", "CloudFormation", "Ansible", "Pulumi"],
+    "cloud_platforms": ["AWS", "Azure", "Google Cloud"],
+    "cloud_serverless": ["AWS Lambda", "Azure Functions", "Google Cloud Functions"],
+    "cloud_storage": ["S3", "Blob Storage", "GCS"],
+    "cloud_databases": ["RDS", "Cloud SQL", "DynamoDB", "CosmosDB"],
+    "database_sql": ["PostgreSQL", "MySQL", "MariaDB", "SQL Server", "Oracle"],
+    "database_nosql": ["MongoDB", "Cassandra", "DynamoDB", "Redis", "CouchDB"],
+    "database_big_data": ["Hadoop", "Spark", "Flink", "Presto"],
+    "cybersecurity_penetration_testing": ["Burp Suite", "Metasploit", "Nmap"],
+    "cybersecurity_security_tools": ["Snort", "Wireshark", "OpenVAS"],
+    "cybersecurity_devsecops": ["OWASP", "SonarQube", "Snyk"],
+    "testing_automation": ["Selenium", "Cypress", "Playwright"],
+    "testing_unit_testing": ["JUnit", "TestNG", "Spock", "pytest"],
+    "testing_performance_testing": ["JMeter", "Gatling"],
+    "networking_protocols": ["TCP/IP", "DNS", "HTTP", "TLS", "VPN"],
+    "networking_cloud_networking": ["VPC", "Load Balancers", "CDN"],
+    "game_engines": ["Unity", "Unreal Engine", "Godot"],
+    "ai_ml_frameworks": ["TensorFlow", "PyTorch", "Scikit-learn", "XGBoost"],
+    "ai_ml_cloud_ml": ["AWS SageMaker", "Google Vertex AI", "Azure ML"],
+    "version_control": ["Git", "Mercurial", "Subversion"],
+    "not_connected": ["Java", "C#", "Python", "Node.js", "Go", "JavaScript", "TypeScript", "CSS", "SCSS", "Spring Boot", ".NET Core", "Django", "Flask", "Express.js", "NestJS", "React", "Angular", "Vue.js", "Svelte", "Tailwind", "Bootstrap", "Redux", "MobX", "Vuex", "Zustand"]
+  }
+}
